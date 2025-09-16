@@ -1,3 +1,4 @@
+
 from math import sqrt
 
 #### Fonction secondaire
@@ -5,6 +6,13 @@ from math import sqrt
 
 def isprime(p):
 
+    """
+    Détermine si un entier p est un nombre premier.
+    Args:
+        p (int): Entier à tester.
+    Returns:
+        bool: True si p est premier, False sinon.
+    """
     if p < 2:
         return False
     if p == 2:
@@ -23,11 +31,11 @@ def main():
 
     # vos appels à la fonction secondaire ici
 
-    for n in range(100):
-        if isprime(n):
-            print(n, end=", ")
-
-    print()
+    """
+    Fonction principale pour tester la fonction isprime sur les entiers de 0 à 99.
+    """
+    premiers = [str(n) for n in range(100) if isprime(n)]
+    print(", ".join(premiers))
 
 
 if __name__ == "__main__":
